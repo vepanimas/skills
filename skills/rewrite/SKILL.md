@@ -1,6 +1,6 @@
 ---
 name: rewrite
-description: "Rewrite, proofread, shorten, soften, or tone-check text the user will send as their own — Slack, issues, PRs, design docs, email. Not for drafting new text, reviewing content or code, or translating."
+description: "Rewrite, proofread, shorten, soften, or tone-check text the user will send as their own — Slack, issues, PRs, design docs, email. Use when the user asks to rewrite, proofread, shorten, soften, or tone-check a message or document they will send. Not for drafting new text, reviewing content or code, or translating."
 ---
 
 # Rewrite
@@ -26,8 +26,8 @@ An explicit request may change otherwise protected material. Protection prevents
 it does not override the user.
 
 Read [references/tone-and-context.md](references/tone-and-context.md) for sensitive or
-conflict-heavy messages, tone checks, boundaries, escalation, and cases where the channel, audience,
-or product framing materially affects the wording.
+conflict-heavy messages, tone checks, boundaries, escalation, passive aggression, and product
+framing.
 
 ## Task and context
 
@@ -42,6 +42,17 @@ consequential inference and proceed without an assumptions preamble.
 Preserve the input language unless the user asks for a different one. Match the natural density and
 formality of the channel: keep short messages short, and keep the structure of longer documents
 unless restructuring is requested.
+
+## Adapt to the channel
+
+- Slack: keep it conversational and compact. Do not add greetings, headers, or sign-offs.
+- Issues: keep reproduction steps, expected and actual behavior, technical detail, and open
+  questions.
+- Issue and PR comments: stay on the specific behavior or decision.
+- PR descriptions, design docs, and RFCs: preserve the author's structure.
+- Email: add a subject, greeting, or sign-off only when the draft already has them or the user
+  asked for a complete email.
+- Leadership: surface an existing decision, ask, or consequence. Do not invent a business rationale.
 
 ## Preserve the content
 
@@ -81,6 +92,18 @@ normalization; never apply them to manufacture style the draft does not have.
   connectives such as "in general" and "in particular".
 - Preserve em dashes already in the draft, but do not add them as a generic connector.
 - Do not write deliberate errors or stiffness to make the author sound non-native.
+
+The default success case is leaving a voice-true draft alone. This is already fine:
+
+> The plugin still fails after reconnect — I saw it twice today, not sure if it's the timeout or
+> the retry logic.
+
+Do not sand it into generic professional prose:
+
+> I've observed intermittent plugin failures following reconnection. This may be related to timeout
+> handling or retry logic.
+
+Fix a typo. Do not rewrite a clear sentence to sound more polished.
 
 ## Preserve firmness without preserving hostility
 
