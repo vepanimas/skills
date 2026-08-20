@@ -1,7 +1,7 @@
 # Tone and context guidance
 
-Read this reference for sensitive messages, disagreement, escalation, boundaries, tone checks, or
-cases where the audience, channel, or product framing materially affects the wording.
+Read this reference for sensitive messages, disagreement, escalation, boundaries, tone checks,
+passive aggression, or product framing.
 
 ## Read the situation
 

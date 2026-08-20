@@ -1,6 +1,6 @@
 ---
 name: prd-review
-description: Review a PRD, product brief, spec or one-pager the user wrote, before they share it. Finds the few issues that would send the team after the wrong problem or surface as a scope argument later. Not for rewriting the document.
+description: Review a PRD, product brief, spec or one-pager the user wrote, before they share it. Finds the few issues that would send the team after the wrong problem or surface as a scope argument later. Use when the user asks to review a PRD, spec, product brief, or one-pager, or whether a product document is ready to share. Not for rewriting the document.
 ---
 
 # PRD review
@@ -80,9 +80,8 @@ questions that would paste straight into a review.
 
 ## Calibrate to a technical author
 
-This user writes as a strong engineer moving into product work. The characteristic failure is not
-vagueness — it is a document that is precise about mechanism and thin about the product argument.
-Three forms of it are worth naming directly:
+Use this lens when the document is precise about mechanism and thin about the product argument.
+The characteristic failure is not vagueness. Three forms of it are worth naming directly:
 
 - Technical constraints presented as product requirements, without saying what the user loses.
 - Depth spent where the decision does not need it, while the section carrying the decision stays at
