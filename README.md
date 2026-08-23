@@ -4,7 +4,7 @@ A personal, opinionated set of skills, helpful for day-to-day agentic developmen
 
 ## Writing
 
-- **prd-review** judges whether a PRD, brief, spec, or one-pager is ready to share. It does not rewrite.
+- **prd-review** gives an expert PM review of an existing PRD or product/feature spec. It does not draft or rewrite.
 - **faithful-edit** conservatively proofreads, shortens, softens, or tone-checks text the user will send.
 - **de-slop** substantially revises AI-generated professional prose to make it focused, specific, and worth reading.
 

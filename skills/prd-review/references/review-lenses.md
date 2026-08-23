@@ -1,89 +1,103 @@
-# Review lenses
+# Expert PM review lenses
 
-Reach for the lens that matches what the document is trying to do; ignore the rest. A lens earns a
-place in the review only when failing it would change a decision someone is about to make.
+Use the lenses that could change the decision this document needs to enable. Inspect all of them,
+but report only material findings. The document does not need standard section names or a prescribed
+order; review the quality of its argument.
 
-## Problem
+## Structure and central idea
 
-- Is the problem stated from the user's side, or only as a gap in the product?
-- Who specifically has it, how often, and what does it cost them today? A problem with no frequency
-  and no cost cannot be prioritized against anything else.
-- What are users doing instead right now? The absence of a workaround usually means the problem is
-  smaller than stated; a widely used workaround usually means it is real.
-- Is the problem the actual problem, or a symptom of one the document is not naming?
-- Would a reader who disagrees be able to point at the specific claim they disagree with? If the
-  framing is too smooth to argue with, it is probably too vague to act on.
+- Can a reader state the target user, problem, intended outcome, and proposed direction after one
+  pass?
+- Is the decision the document asks readers to make explicit and easy to find?
+- Does the argument move coherently from problem and evidence to outcomes, approach, scope,
+  requirements, and measurement? Which missing bridge forces the reader to supply the logic?
+- Does the summary represent the body, or promise a different problem, scope, or result?
+- Are important decisions buried in background or implementation detail?
+- Does each section advance the argument, or do repeated context and local detail obscure the main
+  idea?
+- Does the document distinguish fact, evidence, inference, assumption, hypothesis, decision,
+  requirement, and implementation detail?
 
-## Evidence
+## Idea and problem definition
 
-- Which claims are supported, and by what — data, interviews, support tickets, the author's
-  experience, or nothing?
-- Are quantifiers doing unearned work? "Users find this confusing", "many teams", "frequently".
-  How many, which ones, observed how?
-- Is the sample capable of supporting the claim, or is it a handful of vocal users generalized to
-  the population?
-- Is anything presented as fact that is actually a well-informed guess? Labelling it as an
-  assumption costs one word and changes how the reader treats it.
-- Is contradicting evidence acknowledged anywhere? A document with no tension in it usually means
-  the author stopped looking early.
-- Where evidence is genuinely unavailable, does the document say what would be enough to decide?
+- Who specifically experiences the problem, in what situation, and what are they trying to achieve?
+- Is the document describing a user problem or merely a missing product capability?
+- What fails, slows down, costs more, or becomes risky today? How frequent and severe is it?
+- What do users do instead? A load-bearing workaround is evidence and part of the current product
+  experience.
+- Is the stated problem a root cause, a symptom, or one plausible explanation among several?
+- Why does this deserve attention now rather than another known problem?
+- Is the product idea distinct and coherent, or only a collection of requested features?
 
-## Goals and outcomes
+## Discovery and research
 
-- Are goals stated as changes in user or business behavior, or as things to build? "Ship a settings
-  redesign" is a deliverable; "users can find the setting they need without search" is an outcome.
-- Would the team know, six months later, whether the goal was met?
-- Do the goals conflict with each other, and if so does the document say which wins?
-- Is there a goal that is really a constraint, or a constraint that is really a goal?
+- Which claims are supported by interviews, behavioral data, support cases, market evidence,
+  experiments, domain expertise, or nothing?
+- Was the research method capable of answering the question the document relies on?
+- Is the sample representative enough for the claim, or biased toward vocal users, experts,
+  existing customers, one team, or one workflow?
+- Are words such as `users`, `many`, `often`, and `significant` doing more work than the evidence?
+- Does the document synthesize research into an insight, or only list quotes, requests, and counts?
+- Are contradictory evidence and plausible alternative interpretations acknowledged?
+- Is the evidence recent and relevant to the population, context, and product version in question?
+- Where evidence is unavailable, is the uncertainty named and is there a clear threshold for what
+  would be enough to decide?
 
-## Non-goals and scope
+## Correctness of the approach
 
-- Do the non-goals rule out things a reader would plausibly assume are included? A non-goal that
-  nobody would have expected anyway is decoration.
-- Which adjacent problem is the most likely source of scope creep, and does the document close it?
-- Is the boundary between this and neighboring teams' work stated, where one exists?
-- Is anything in scope that the evidence does not justify — carried along because it is convenient
-  to build at the same time?
+- Does the proposed mechanism address the evidenced cause, or only the visible symptom?
+- Is there a plausible causal path from the solution to the intended user or business outcome?
+- Were credible alternatives considered fairly, including doing less, changing the workflow, or not
+  building anything?
+- Is this the smallest useful intervention or test, or the most complete solution the team can
+  imagine?
+- Which assumption would invalidate the approach if wrong, and how will the team learn that early?
+- What has to change in user behavior for the solution to work? Is adoption assumed or designed for?
+- Are dependencies, operational constraints, migration, reversibility, and lock-in treated as
+  product concerns where they affect the outcome?
+- Which users, workflows, or adjacent goals become worse because of the chosen tradeoff?
 
-## Solution justification
+## Scope, requirements, and underdefinition
 
-- Did the document reach a solution before establishing the problem?
-- Were alternatives considered, and is the reason for rejecting them recorded? An alternatives
-  section that exists only to make the chosen option look inevitable is worse than none.
-- Is the solution the smallest thing that addresses the problem, or the most complete thing?
-- Which assumption, if wrong, breaks the whole approach? Is it named?
-- Is the solution reversible, and does the document acknowledge what it locks in?
+- Do goals describe changes in user or business behavior rather than deliverables?
+- Do non-goals close the adjacent scope readers are actually likely to assume is included?
+- Are boundaries between teams, systems, user groups, and phases explicit where ownership could be
+  disputed?
+- Could two capable teams read a requirement and build observably different behavior? Find the words
+  where they would diverge.
+- Are the actor, trigger, preconditions, states, outcome, failure behavior, and relevant limits clear?
+- Are terms such as `fast`, `intuitive`, `reliable`, `seamless`, `easy`, or `supported` defined well
+  enough to verify?
+- Are important states covered: empty, loading, error, partial, offline, first run, migration, and
+  domain-specific failure states?
+- Is a product requirement actually an implementation decision, or is an implementation preference
+  being presented as a user need?
+- Which requirements are essential, which are preferences, and what wins when they conflict?
 
-## Requirements
+## Outcomes and measurement
 
-- Would two engineers reading this build the same thing? Find the sentence where they would diverge.
-- Are important states covered — empty, loading, error, partial, offline, first run, migration, and
-  whatever the domain adds?
-- Is each requirement verifiable? "Fast", "intuitive", "reliable" and "seamless" cannot be checked.
-- Are there implicit dependencies on other teams, systems, releases, or data that nobody has agreed
-  to yet?
-- Is any requirement actually a design decision that should be left open, or a design decision
-  smuggled in as a requirement?
-- Which requirements are essential and which are preferences? If everything is mandatory, the first
-  schedule pressure will decide arbitrarily.
+- Would the success criteria show that the original problem was solved, or only that the feature was
+  shipped, invoked, or adopted?
+- Is there a baseline, target or threshold, observation period, and owner for interpreting the
+  result?
+- Can the metric be measured with the instrumentation, access, sample, and release cadence that
+  actually exist?
+- Is there a guardrail or counter-metric that would reveal harm elsewhere?
+- Does the document say what decision follows if the result misses the threshold?
+- When quantitative measurement is unsuitable, is the qualitative judgment procedure concrete
+  enough to repeat?
 
-## Success criteria
+## Counterarguments, risks, and coherence
 
-- Do the metrics show that the *problem* was solved, or only that the *feature* was used? Adoption
-  is not resolution.
-- Can the metric actually be measured with the instrumentation that exists or is planned?
-- What is the threshold, and what happens below it? A metric with no threshold is a report, not a
-  criterion.
-- Is there a counter-metric or guardrail — something that would reveal the change made things worse
-  elsewhere?
-- Over what period, and who looks?
+- What is the strongest credible argument that the problem is smaller, different, or less urgent
+  than the document claims?
+- What alternative explanation fits the same research or observed behavior?
+- What is the strongest objection to the chosen approach from a skeptical user, designer, engineer,
+  operator, or decision-maker?
+- Who bears a cost or loses a useful workflow if the proposal succeeds as written?
+- Do the stated goals, non-goals, requirements, risks, and metrics contradict one another?
+- Does the document answer hard objections with evidence or an explicit tradeoff, rather than
+  dismissing them or omitting them?
 
-## Risks, tradeoffs, and coherence
-
-- Does the document contradict itself between sections — a non-goal that a requirement re-admits, a
-  metric unrelated to the stated goal, a summary that promises more than the scope delivers?
-- Are the real risks named, or only the safe ones? A risk section with no uncomfortable entry is a
-  formality.
-- Is a tradeoff being avoided rather than made? Unresolved tradeoffs resurface as mid-project
-  arguments.
-- What is the strongest objection a skeptical reader would raise, and does the document survive it?
+Do not manufacture debate for its own sake. Turn an objection into a finding only when it remains
+unanswered and resolving it could change the decision, scope, or approach.
