@@ -1,0 +1,4 @@
+interface:
+  display_name: "PRD Review"
+  short_description: "Review a PRD for product gaps and readiness"
+  default_prompt: "Use $prd-review to review this product document and identify the most consequential gaps."

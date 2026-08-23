@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rewrite Generic Prose"
+  short_description: "Turn generic professional prose into focused writing"
+  default_prompt: "Use $rewrite-generic-prose to revise this draft into focused, specific prose that is worth reading."
