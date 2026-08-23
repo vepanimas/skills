@@ -13,7 +13,7 @@ If they already know what they want, `spec-propose` is the right skill.
 ## What this skill does not do
 
 - No planning artifacts. Capturing the exploration is `spec-propose`.
-- No product code, refactors, or "while we're here" edits.
+- No product code, refactors, or "while we're here" edits during exploration.
 - No PRD review. That is `prd-review`.
 - No revising an existing change's files. That is `spec-update`.
 
@@ -28,7 +28,10 @@ Follow the interesting thread. This is thinking time, not a script.
 
 ## Layout
 
-These paths are in the project being changed, not in this skills repo.
+These paths are in the project being changed, not in this skills repo. They are
+the defaults. Use different paths only when repository instructions define them
+or an existing change already maps the same artifact roles. Resolve each role
+to a concrete path before using it, then preserve that mapping.
 
 ```text
 changes/<name>/
@@ -47,14 +50,17 @@ and read a relevant change's artifacts for context. Do not edit them.
 
 ## Work
 
-1. Understand what they are trying to decide. Infer the rest. Ask at most once,
-   and only when the answer would change the recommendation.
+1. Understand what they are trying to decide. Infer the rest. Ask only when the
+   answer would change the recommendation, batching related questions when
+   practical. Do not force a guess while a consequential decision remains.
 2. Read the parts of the codebase that matter. Name what you found, not a tour.
 3. If more than one approach is viable, compare them on the axes that actually
    differ — complexity, risk, blast radius, fit with existing patterns.
 4. When the shape is clear, state the change in one sentence, the boundary, and
-   the open questions still worth answering. Point to `spec-propose`. Do not
-   start it in this turn.
+   the open questions still worth answering. If the request was exploration
+   only, point to `spec-propose` and stop. If it explicitly includes planning or
+   implementation, announce the transition and continue with `spec-propose`;
+   complete planning artifacts before using `spec-apply`.
 
-If they ask you to implement during explore, refuse the implementation and
-point at `spec-propose`, then `spec-apply`.
+Until the transition is announced, do not create or modify files. After the
+transition, follow the next skill's rules.

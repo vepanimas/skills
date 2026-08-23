@@ -1,8 +1,10 @@
 # Merge delta specs
 
-Deltas live at `changes/<name>/specs/<capability>/spec.md`. Durable contracts
-live at `specs/<capability>/spec.md`. Preserve each capability path. Do not
-infer deltas from `proposal.md` or `design.md`.
+Deltas live at `changes/<name>/specs/<capability>/spec.md` and durable contracts
+at `specs/<capability>/spec.md` under the default layout. Before merging, resolve
+both roots to concrete paths from repository instructions or the selected
+change's established layout; otherwise use these defaults. Preserve each
+capability path. Do not infer deltas from `proposal.md` or `design.md`.
 
 Main specs use `## Purpose` and `## Requirements`. Deltas use `## ADDED
 Requirements`, `## MODIFIED Requirements`, `## REMOVED Requirements`, and

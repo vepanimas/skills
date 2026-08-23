@@ -5,22 +5,28 @@ description: Create a spec change with planning artifacts — proposal, delta sp
 
 # Spec propose
 
-Create a change folder and write the planning artifacts. Stop. Do not implement,
-even if the request also asks to build or fix something.
+Create a change folder and write the planning artifacts before implementation.
+If the request is proposal-only, stop after the artifacts. If it explicitly
+also asks to build or fix the change, re-read the completed artifacts, announce
+the transition, and continue with `spec-apply`.
 
 If the problem is still vague, `spec-explore` first. If the change already
 exists, `spec-update`.
 
 ## What this skill does not do
 
-- No product code. Implementation is `spec-apply`, on a later request.
+- No product code while proposing. Implementation begins with `spec-apply` only
+  after the planning artifacts are complete.
 - No exploring-as-output. Thinking without files is `spec-explore`.
 - No revising an existing change. That is `spec-update`.
 - No PRD review. That is `prd-review`.
 
 ## Layout
 
-These paths are in the project being changed, not in this skills repo.
+These paths are in the project being changed, not in this skills repo. They are
+the defaults. Use different paths only when repository instructions define them
+or an existing change already maps the same artifact roles. Resolve each role
+to a concrete path before writing, then preserve that mapping.
 
 ```text
 changes/<name>/
@@ -41,10 +47,10 @@ capability.
 
 1. Understand the change. Derive a kebab-case name from the request
    (`add user authentication` → `add-user-auth`). Do not proceed without
-   knowing what they want to build or fix. Ask at most once, and only when the
-   answer would change scope, observable behavior, compatibility, or acceptance
-   criteria. For smaller gaps, assume and record the assumption in the
-   proposal.
+   knowing what they want to build or fix. Ask when the answer would change
+   scope, observable behavior, compatibility, or acceptance criteria, batching
+   related questions when practical. For smaller gaps, assume and record the
+   assumption in the proposal.
 
 2. If `changes/<name>/` already exists, stop and ask whether to switch to
    `spec-update` or pick a new name.
@@ -67,20 +73,29 @@ capability.
      [references/tasks.md](references/tasks.md). Reference the deltas for what,
      the design for how.
 
-4. Summarize the change path, the files written, and any artifact skipped.
-   Point to `spec-apply`. Do not start it.
+4. Summarize the change path, the files written, and any artifact skipped. If
+   the request was proposal-only, point to `spec-apply` and stop. If the request
+   explicitly includes implementation, announce the transition and continue
+   with `spec-apply`.
 
 ## Artifact rules
 
 - A change has one intent you can say in a sentence. Split unrelated work.
-- Specs are behavior contracts, not implementation plans. SHALL/MUST, one
-  behavior per requirement, at least one scenario that could be tested.
+- Specs are behavior contracts, not implementation plans. Use the project's
+  normative keywords when defined; otherwise use SHALL/MUST for hard
+  requirements and SHOULD only when a stated exception is allowed. Each
+  requirement describes one independently testable behavior and includes at
+  least one scenario or equivalent acceptance example that exercises it.
 - Capability paths are kebab-case (`user-auth`, or `identity/user-auth` if the
   project already groups that way). Preserve an existing capability's path.
 - New capability: start the delta with `## Purpose`. Modified capability: paste
   the full existing requirement, then edit. Read the durable
   `specs/<capability>/spec.md` before writing a MODIFIED or REMOVED delta.
-- Tasks use `- [ ] X.Y …` with a verification hint on the same line.
-  `spec-apply` tracks only that format.
+- Tasks default to `- [ ] X.Y …` with a verification hint on the same line. An
+  existing style may change the bullet, numbering, grouping, or placement of
+  the verification hint, but each task must remain a standard Markdown checkbox
+  with an unambiguous verification method.
 
-Fill the templates. Do not copy this skill's instructions into the files.
+Use the templates unless repository instructions or existing artifacts define
+different headings that capture the same information. The delta grammar remains
+fixed for `spec-archive`. Do not copy this skill's instructions into the files.
