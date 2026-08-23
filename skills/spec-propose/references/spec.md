@@ -4,7 +4,8 @@ A spec is a behavior contract. Write one delta file per capability at
 `changes/<name>/specs/<capability>/spec.md`.
 
 Good spec content: observable behavior, inputs/outputs/errors, constraints
-(security, privacy, reliability, compatibility), scenarios someone could test.
+(security, privacy, reliability, compatibility), and at least one scenario or
+equivalent acceptance example for every requirement.
 
 Leave out class names, library choices, and step-by-step implementation.
 
@@ -46,10 +47,13 @@ The system SHALL <observable behavior>.
 - TO: `### Requirement: <new>`
 ```
 
-Omit sections that do not apply. Use `SHALL`/`MUST` for hard requirements.
-`SHOULD` only when a justified exception is allowed. One behavior per
-requirement; split "and also" clauses. Every requirement needs at least one
-scenario that exercises it, not a restatement of the SHALL.
+Omit sections that do not apply. Use the project's normative keywords when
+defined; otherwise use `SHALL`/`MUST` for hard requirements and `SHOULD` only
+when a stated exception is allowed. Each requirement describes one
+independently testable behavior. Every requirement includes at least one
+scenario or equivalent acceptance example that exercises the behavior rather
+than restating it. The delta section and `### Requirement:` headings are fixed
+because `spec-archive` uses them when merging.
 
 Read the durable `specs/<capability>/spec.md` before writing MODIFIED, REMOVED,
 or RENAMED.

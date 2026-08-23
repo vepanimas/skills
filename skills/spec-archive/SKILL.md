@@ -1,13 +1,14 @@
 ---
 name: spec-archive
-description: Merge a spec change's deltas from changes/<name>/specs/ into durable specs/ and move the change to changes/archive/. Use when the user wants to archive or finalize a completed spec change. Not for implementing remaining tasks, starting a new change, or exploring.
+description: Merge a selected change's delta specs into its durable capability specs, then move the complete change folder into the project archive. Use when the user explicitly wants to archive or finalize a completed change. Not for implementing remaining tasks, starting a new change, or exploring.
 ---
 
 # Spec archive
 
-Merge this change's deltas into the durable specs, then move the change folder
-into `changes/archive/`. Warn on incomplete artifacts or tasks; do not treat
-them as a hard stop. Ask once, then proceed if the user confirms.
+Merge the selected change's deltas into the resolved durable-spec paths, then
+move the complete change folder into the resolved archive path. Warn on
+incomplete artifacts or tasks; do not treat them as a hard stop. Ask once, then
+proceed if the user confirms.
 
 Implementation of leftover tasks is `spec-apply`. Plan fixes are `spec-update`.
 
@@ -20,7 +21,11 @@ Implementation of leftover tasks is `spec-apply`. Plan fixes are `spec-update`.
 
 ## Layout
 
-These paths are in the project being changed, not in this skills repo.
+These paths are in the project being changed, not in this skills repo. They are
+the defaults. Use different paths only when repository instructions define them
+or the existing change already maps the same artifact roles. Resolve the change,
+delta, durable-spec, and archive paths before modifying anything, then preserve
+that mapping.
 
 ```text
 changes/<name>/
@@ -38,15 +43,17 @@ Active changes are directories under `changes/` except `archive/`.
 ## Select the change
 
 Use the name the user gave. Otherwise infer it from the conversation. If only
-one active change exists, use it. If several match, list them and ask once.
+one active change exists, use it. If several match, list the relevant candidates
+and ask which one to use.
 
 Announce `Using change: <name>`.
 
 ## Work
 
-1. Read `changes/<name>/`. Note missing artifacts and count `- [ ]` in
-   `changes/<name>/tasks.md`. If anything is incomplete, warn and ask once.
-   Proceed on confirm. No tasks file is not a warning by itself.
+1. Read every artifact in the selected change folder, including nested delta
+   specs. Note missing artifacts and count unchecked standard Markdown task
+   boxes in its task list. If anything is incomplete, warn and ask for
+   confirmation. Proceed on confirm. No tasks file is not a warning by itself.
 2. Decide whether to merge **before** touching durable `specs/`. If the user
    asked to archive without merging, say that deltas were not applied and skip
    the next step.

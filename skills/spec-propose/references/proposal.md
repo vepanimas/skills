@@ -1,7 +1,9 @@
 # Proposal template
 
-Write `changes/<name>/proposal.md` with these sections. Keep it to a page or
-two. Why and what live here; how lives in `design.md`.
+Write `changes/<name>/proposal.md` with these sections by default. Repository
+instructions or existing proposals may use different headings only when they
+still capture why, what changes, affected capabilities, and impact. Keep it to a
+page or two. Why and what live here; how lives in `design.md`.
 
 ```markdown
 ## Why
