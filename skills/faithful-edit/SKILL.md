@@ -1,9 +1,9 @@
 ---
-name: source-close-edit
-description: "Edit text the user will send as their own while staying close to its meaning, wording, voice, and structure. Use to proofread, shorten, soften, tone-check, or answer 'Can I say...?' Not for drafting, content review, translation, or substantial restructuring of generic or AI-written prose."
+name: faithful-edit
+description: "Edit text the user will send as their own while staying faithful to its meaning, wording, voice, and structure. Use to proofread, shorten, soften, tone-check, or answer 'Can I say...?' Not for drafting, content review, translation, or substantial restructuring of generic or AI-written prose."
 ---
 
-# Source-close edit
+# Faithful edit
 
 Edit text the user will send as their own. Make it correct, natural, professional, and suitable for
 its context without replacing the author's voice with a generic polished style.

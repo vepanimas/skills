@@ -5,10 +5,10 @@ A personal, opinionated set of skills, helpful for day-to-day agentic developmen
 ## Writing
 
 - **prd-review** judges whether a PRD, brief, spec, or one-pager is ready to share. It does not rewrite.
-- **source-close-edit** conservatively proofreads, shortens, softens, or tone-checks text the user will send.
+- **faithful-edit** conservatively proofreads, shortens, softens, or tone-checks text the user will send.
 - **de-slop** substantially revises AI-generated professional prose to make it focused, specific, and worth reading.
 
-They split the work. Review a product document with **prd-review**. Preserve the author's wording and voice with **source-close-edit**. Rebuild generic AI prose around the reader and its central idea with **de-slop**.
+They split the work. Review a product document with **prd-review**. Preserve the author's wording and voice with **faithful-edit**. Rebuild generic AI prose around the reader and its central idea with **de-slop**.
 
 A spec change's `proposal.md` is not a PRD. Editing it is **spec-update**. Reviewing a product document before sharing it is **prd-review**.
 
