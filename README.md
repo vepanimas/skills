@@ -19,6 +19,10 @@ Five skills for spec-driven work in a consuming project. They are designed and
 supported as one suite; install all five even if you usually enter the workflow
 through only one of them.
 
+The suite was initially derived from
+[OpenSpec](https://github.com/Fission-AI/OpenSpec), then rewritten for this
+repository. It is not kept in sync with upstream.
+
 - **spec-explore** thinks through a problem. It does not write files.
 - **spec-propose** creates the planning artifacts before implementation.
 - **spec-apply** implements a change's task list and uses **spec-update** when the plan changes.
