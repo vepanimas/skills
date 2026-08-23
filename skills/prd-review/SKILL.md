@@ -1,15 +1,21 @@
 ---
 name: prd-review
-description: Review a PRD, product brief, spec or one-pager the user wrote, before they share it. Finds the few issues that would send the team after the wrong problem or surface as a scope argument later. Use when the user asks to review a PRD, spec, product brief, or one-pager, or whether a product document is ready to share. Not for rewriting the document.
+description: "Review an existing PRD, product brief, or product/feature spec as an expert product manager. Use when the user supplies or references a concrete product document and asks for critique, gaps, counterarguments, or readiness. Not for drafting or rewriting, generic product questions, idea exploration without a document, implementation code, or purely technical architecture and design specs."
 ---
 
 # PRD review
 
-Review a product document the user is about to share, so they can fix what matters before other
-people read it. The reader is the author. Write to them, not about them.
+Review an existing product document as an experienced product manager. Test whether its structure,
+problem, evidence, approach, scope, requirements, and outcomes form a defensible argument for the
+decision it needs to enable. The reader is the author. Write to them, not about them.
 
-The document is usually a PRD, but the same review applies to a product brief, spec, one-pager,
-initiative proposal or RFC with a product argument in it.
+The document may be a PRD, product brief, one-pager, or product/feature spec. A technical document is
+in scope only when it carries a product argument: a user problem, intended outcome, product scope,
+or product requirements. The presence of the word `spec` is not enough.
+
+This skill requires a document in the request, an attachment, a link, or an accessible repository
+path. Do not invoke it for a generic product question or an idea the user wants to discuss. Handle
+that conversation normally or with the relevant exploration workflow.
 
 Produce a working review, not an audit. A short review that names the one thing blocking the
 document is more useful than a complete one.
@@ -20,8 +26,8 @@ document is more useful than a complete one.
 - No section-by-section walkthrough.
 - No rewritten version of the document, and no drafted sections. Point at the gap; the author fills
   it.
-- No invented research, requirements, metrics, personas, or competitor facts. If evidence is
-  missing, say it is missing.
+- No invented research, requirements, metrics, personas, or competitor facts.
+- No broad independent market or competitor research unless the user explicitly requests it.
 - No generic praise, and no exhaustive edge-case lists.
 - No copy-editing. Wording only comes up when it creates real ambiguity. For wording work, the
   `faithful-edit` skill is the right tool.
@@ -51,32 +57,49 @@ If the user named a specific worry ("is the problem section convincing", "will e
 requirements the way I meant them"), that concern outranks the skill's own priorities, but do not
 suppress a more serious finding elsewhere.
 
-## Review priorities
+## Review the product argument
 
-Look for what would cause real damage downstream, in roughly this order:
+Read [references/review-lenses.md](references/review-lenses.md) by default. Use it to test these
+parts of the argument, not as an output checklist:
 
-1. The team solves the wrong problem, or a problem that is not evidenced.
-2. Readers take away different intended outcomes.
-3. Product, design and engineering can each read the document and make incompatible decisions.
-4. Scope is open enough that the disagreement surfaces mid-implementation instead of now.
-5. A solution is committed to without enough justification, or alternatives were never weighed.
-6. Requirements are unverifiable — nobody can tell whether they were met.
-7. Nothing in the document reveals whether the change worked after shipping.
+1. **Structure and idea.** Can a skeptical reader find the central product idea, the decision, and
+   the logical path from problem to proposed action? Does the summary agree with the body?
+2. **Problem definition.** Is the affected user and context specific? Is this the root problem or a
+   symptom? Are frequency, severity, current behavior, and why-now sufficiently established for the
+   document's stage?
+3. **Discovery and research.** Do the methods and sample support the claims? Are bias,
+   contradictory evidence, alternative interpretations, and remaining assumptions visible?
+4. **Correctness of approach.** Does the proposal plausibly address the evidenced cause? Were real
+   alternatives, constraints, adoption, dependencies, tradeoffs, reversibility, and a smaller test
+   considered?
+5. **Scope and definition.** Could product, design, and engineering make incompatible decisions from
+   the text? Find missing boundaries, actors, states, thresholds, ownership, and undefined terms.
+6. **Outcomes.** Would the success criteria show that the original problem was solved, rather than
+   merely that the feature was shipped or used?
+7. **Counterarguments and coherence.** Formulate the strongest credible objection to the problem,
+   evidence, or approach. Report it only when the document does not already answer it and resolving
+   it could change the decision.
 
-Separate what the document treats as fact, assumption, hypothesis, decision, and implementation
-detail. Most weak PRDs blur two of those together — an assumption written as a fact, or a decision
-buried in an implementation note. Naming the confusion is often the single most useful finding.
+Separate fact, evidence, inference, assumption, hypothesis, decision, requirement, and
+implementation detail. Naming a consequential category error is often more useful than asking for
+more detail.
 
-Read [references/review-lenses.md](references/review-lenses.md) by default. Skip it only for a
-document under roughly two pages whose problems are already obvious from one read.
+## Validate the evidence supplied
+
+Open cited or linked evidence when it is accessible. Check whether it supports the specific claim,
+not merely whether a source exists. Consider the method, sample, population, recency, and whether
+the document generalizes beyond what the evidence can establish.
+
+Distinguish verified evidence from the document's interpretation of it. If a source is unavailable,
+say that the claim is unverified and explain whether that uncertainty changes the decision. Do not
+fill the gap with broad independent research unless the user asked for it.
 
 Read [references/devtools-pitfalls.md](references/devtools-pitfalls.md) when the document concerns
 developer tools, an IDE, a platform or SDK other teams build on, or an AI-powered feature. It
 covers failure modes that are specific to those and easy to miss with generic product review.
 
-Both references are search tools, not output structure. Do not walk them, cover them, or reuse their
-questions as findings — the bullets in `devtools-pitfalls.md` in particular are already phrased as
-questions that would paste straight into a review.
+Both references are search tools, not output structure. Do not walk them, cover them, or paste their
+questions into the review.
 
 ## Calibrate to a technical author
 
@@ -94,42 +117,37 @@ about which part to deepen first.
 
 ## Output
 
-Keep the whole review short enough to act on in one sitting. Five findings is a hard ceiling; two
-real ones beat five padded ones, and there is no floor.
+Keep the whole review short enough to act on in one sitting. Seven findings is a hard ceiling; three
+to seven is normal for a substantive document, but there is no floor. Never pad a strong review.
 
 Clear this bar: a reader who already knows the domain finds at least one finding non-obvious. A
 review that only tells the author what they already know has not earned the reading.
 
 ### Verdict
 
-One short paragraph: whether the document is ready for the decision it has to enable, the single
-main reason it is or is not, and what it does well. Lead with whichever of those is the real news.
-When the document is plainly not ready, opening with praise reads as a formality — get to the
-reason first and let the strength land as the qualification it is.
+One short paragraph: whether the document is ready for the decision it has to enable and the single
+main reason it is or is not. Mention a strength only when it materially affects that judgment. When
+the document is plainly not ready, lead with the reason.
 
 ### Findings
 
 Ordered by how much damage they cause, not by where they appear in the document. For each:
 
-- **Finding** — what is wrong, quoting or pointing at specific wording in the document.
-- **Fix** — what the author should do. Concrete enough to act on, short of writing the text for
-  them. "Go find out X" is a legitimate fix.
+- **Finding** — what is wrong, quoting or pointing at the relevant wording.
+- **Why it matters** — the decision, product, or implementation risk it creates.
+- **Resolve by** — the evidence, decision, boundary, definition, or change in reasoning needed.
+  "Go find out X" is legitimate. Do not draft the replacement text.
 
 On the finding line, tag the underlying pattern in one clause — "goal written as a deliverable, not
 an outcome", "assumption presented as a fact", "requirement nobody can verify" — when the author
 could carry that pattern to a different document tomorrow. Name the pattern, never a framework. One
 or two per review is normal; a tag on every finding means they have stopped carrying information.
 
-### Before you share this
+### Before you share
 
 Only the work a fix cannot contain: people to talk to, agreements to secure, facts to go find,
 decisions someone else has to make. If a fix already covers it, leave it out. Up to five items,
-frequently fewer — this section is short when the document's problems are all internal to it.
-
-### Minor notes
-
-Only when a few small fixes are genuinely worth making and do not belong above. Maximum three.
-Omit the section entirely otherwise.
+frequently fewer. Omit the section when the document's problems are all internal to it.
 
 ## Style
 
