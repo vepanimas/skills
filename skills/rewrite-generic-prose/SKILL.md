@@ -1,9 +1,9 @@
 ---
-name: de-slop
+name: rewrite-generic-prose
 description: "Revise an existing AI-generated or generic professional draft to make it specific, focused, and worth reading. Use when the user asks to de-slop, humanize, remove AI-sounding prose, or improve an AI-written document, article, explanation, proposal, or post. Not for source-close proofreading, content review, fiction, drafting from scratch, or evading AI-detection tools."
 ---
 
-# De-slop
+# Rewrite generic prose
 
 Revise professional prose that sounds generic or machine-produced. Earn the reader's attention by
 giving them clear value for the time they spend. This is a substantive rewrite: cut, reorder, and
@@ -55,7 +55,7 @@ is supported and name the gap after the rewrite.
 Reader-centered does not mean simplified at any cost. Keep necessary complexity, qualifications,
 and technical detail; make their relevance and relationships easier to follow.
 
-## Remove the slop
+## Remove generic patterns
 
 Cut or rewrite:
 
