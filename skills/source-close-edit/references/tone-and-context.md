@@ -13,20 +13,6 @@ Consider:
 - stakes, urgency, and current level of tension;
 - whether the author is exploring, recommending, deciding, or setting a boundary.
 
-## Adapt by tendency, not template
-
-- Keep Slack conversational and compact. Do not add greetings, headers, or sign-offs unless the
-  draft already needs them.
-- Keep issue entries observable and actionable. Preserve reproduction steps, expected and actual
-  behavior, technical details, and open questions.
-- Keep issue and PR comments focused on the specific behavior or decision under discussion.
-- Preserve the author's structure in PR descriptions, design documents, and RFCs. Improve ordering
-  only when requested or when the existing order obscures the point.
-- In leadership communication, make the decision, ask, consequence, or outcome easy to find when it
-  is already present. Do not invent a business rationale.
-- In email, add a subject, greeting, or sign-off only when the user requests a complete email or the
-  supplied draft clearly includes those elements.
-
 ## Make disagreement professional without weakening it
 
 Remove judgments about intelligence, competence, motives, status, or character. Translate them into
@@ -61,15 +47,17 @@ focus on the unresolved disagreement:
 > "I've explained the use cases twice, and we still seem to be working from different assumptions
 > about what is in scope."
 
-Add a question or next step only if the author supplied or clearly implied one.
+Add a question or next step only if the author supplied one or the user explicitly asked you to
+complete the message.
 
 ## Preserve boundaries and escalation
 
 Courtesy and firmness are compatible. Keep a refusal, requirement, deadline, or approval condition
 clear. Remove personal attacks, not the boundary itself.
 
-If the message is likely to escalate conflict in a public channel, briefly suggest a DM, call, or
-follow-up document, but still provide a usable rewrite for the user to judge.
+If the message is likely to escalate conflict in a public channel and a channel change would
+materially help, provide the usable rewrite first, then add at most one brief suggestion to move the
+discussion to a DM, call, or follow-up document. Do not make that move a requirement.
 
 ## Product framing
 

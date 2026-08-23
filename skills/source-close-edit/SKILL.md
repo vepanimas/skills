@@ -1,15 +1,18 @@
 ---
-name: rewrite
-description: "Rewrite, proofread, shorten, soften, or tone-check text the user will send as their own — Slack, issues, PRs, design docs, email. Use when the user asks to rewrite, proofread, shorten, soften, or tone-check a message or document they will send. Not for drafting new text, reviewing content or code, or translating."
+name: source-close-edit
+description: "Edit text the user will send as their own while staying close to its meaning, wording, voice, and structure. Use to proofread, shorten, soften, tone-check, or answer 'Can I say...?' Not for drafting, content review, translation, or substantial restructuring of generic or AI-written prose."
 ---
 
-# Rewrite
+# Source-close edit
 
 Edit text the user will send as their own. Make it correct, natural, professional, and suitable for
 its context without replacing the author's voice with a generic polished style.
 
 Default to the smallest change that solves the actual problem. Leaving the original unchanged is a
 valid result.
+
+Use `de-slop` instead when the user wants substantial restructuring of generic or AI-written prose
+around the reader, a central idea, and a clearer payoff.
 
 ## Priority order
 
@@ -31,9 +34,9 @@ framing.
 
 ## Task and context
 
-The request may be proofreading, a conservative rewrite, shortening, tone repair, or a tone check
-without a rewrite. Match it. Do not turn a content review, technical review, or exact-format
-conversion into a rewrite unless the user also asks for editing.
+The request may be proofreading, a conservative rewrite, shortening, tone repair, a tone check, or
+a wording correctness check without a rewrite. Match it. Do not turn a content review, technical
+review, or exact-format conversion into a rewrite unless the user also asks for editing.
 
 Infer channel, audience, purpose, and relationship from the request and the draft. Ask only when the
 ambiguity would materially change the meaning, firmness, or advice; otherwise make the least
@@ -126,23 +129,21 @@ Do not disguise a decision as an open question, turn a request into a suggestion
 the author does not feel. Direct and respectful is usually more collaborative than heavily softened.
 Use `we` only when ownership is genuinely shared.
 
-## Avoid AI slop
+## Avoid generic polish
 
 Do not add:
 
 - canned openings, pleasantries, praise, enthusiasm, or performative gratitude;
-- unnecessary signposting, summaries, conclusions, or restatements;
+- unnecessary signposting, restatements, headings, bold lead-ins, or lists;
 - artificial symmetry, rule-of-three phrasing, uniformly shaped bullets, or dramatic contrasts;
-- extra headings, bold lead-ins, or lists for ideas that work better as ordinary prose;
-- corporate or marketing language where plain technical language is more accurate;
-- needless hedges, apologies, intensifiers, transitions, idioms, humour, or polished flourishes.
+- corporate or marketing language, needless hedges, apologies, intensifiers, or polished flourishes.
 
 Judge words in context rather than applying a vocabulary blacklist. Terms that are vague in one
 message may be technically correct in another.
 
-Prevent new AI-style wording by default. Rewrite existing AI-style wording across the whole draft
-only when the user asks to make the draft sound less AI-generated or clearly requests a broader
-rewrite. Do not speculate about who wrote the input.
+Prevent generic AI-style wording in every edit, but do not turn a local rewrite into a whole-draft
+de-slopping pass. Use `de-slop` when removing generic AI prose or reorganizing for reader attention
+is the primary task. Do not speculate about who wrote the input.
 
 ## Output
 
@@ -150,6 +151,8 @@ rewrite. Do not speculate about who wrote the input.
 - For minor corrections, return the text without a change log unless the user asks for one.
 - For consequential tone or meaning-preservation choices, add `Changed:` with one to three concise,
   concrete notes after the rewrite.
+- For "Can I say...?" or a correctness check, give a direct verdict and a minimally edited,
+  ready-to-use sentence.
 - For a tone check, give a concise verdict, identify any phrase that creates the issue, and provide
   replacement wording or a rewrite when useful.
 - If the original already works, say so and offer at most one optional improvement.
