@@ -9,7 +9,7 @@ Revise professional prose that sounds generic or machine-produced. Earn the read
 giving them clear value for the time they spend. This is a substantive rewrite: cut, reorder, and
 recast when that makes the draft more useful and compelling.
 
-Use `source-close-edit` instead when the user wants conservative editing that stays close to their
+Use `faithful-edit` instead when the user wants conservative editing that stays close to their
 wording, voice, and structure.
 
 ## Priorities

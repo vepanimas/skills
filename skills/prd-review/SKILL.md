@@ -24,7 +24,7 @@ document is more useful than a complete one.
   missing, say it is missing.
 - No generic praise, and no exhaustive edge-case lists.
 - No copy-editing. Wording only comes up when it creates real ambiguity. For wording work, the
-  `source-close-edit` skill is the right tool.
+  `faithful-edit` skill is the right tool.
 
 ## Get the input and the frame
 
