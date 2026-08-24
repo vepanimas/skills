@@ -11,7 +11,7 @@ its context without replacing the author's voice with a generic polished style.
 Default to the smallest change that solves the actual problem. Leaving the original unchanged is a
 valid result.
 
-Use `rewrite-generic-prose` instead when the user wants substantial restructuring of generic or AI-written prose
+Use `deslop-writing` instead when the user wants substantial restructuring of generic or AI-written prose
 around the reader, a central idea, and a clearer payoff.
 
 ## Priority order
@@ -142,7 +142,7 @@ Judge words in context rather than applying a vocabulary blacklist. Terms that a
 message may be technically correct in another.
 
 Prevent generic AI-style wording in every edit, but do not turn a local rewrite into a substantive
-whole-draft rewrite. Use `rewrite-generic-prose` when removing generic AI prose or reorganizing for
+whole-draft rewrite. Use `deslop-writing` when removing generic AI prose or reorganizing for
 reader attention is the primary task. Do not speculate about who wrote the input.
 
 ## Output

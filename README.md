@@ -7,9 +7,9 @@ work across technology stacks and across a team.
 
 - **prd-review** gives an expert PM review of an existing PRD or product/feature spec. It does not draft or rewrite.
 - **faithful-edit** conservatively proofreads, shortens, softens, or tone-checks text the user will send.
-- **rewrite-generic-prose** substantially revises AI-generated professional prose to make it focused, specific, and worth reading.
+- **deslop-writing** substantially revises AI-generated professional prose to make it focused, specific, and worth reading.
 
-They split the work. Review a product document with **prd-review**. Preserve the author's wording and voice with **faithful-edit**. Rebuild generic AI prose around the reader and its central idea with **rewrite-generic-prose**.
+They split the work. Review a product document with **prd-review**. Preserve the author's wording and voice with **faithful-edit**. Rebuild generic AI prose around the reader and its central idea with **deslop-writing**.
 
 A spec change's `proposal.md` is not a PRD. Editing it is **spec-update**. Reviewing a product document before sharing it is **prd-review**.
 

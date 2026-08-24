@@ -1,9 +1,9 @@
 ---
-name: rewrite-generic-prose
+name: deslop-writing
 description: "Revise an existing AI-generated or generic professional draft to make it specific, focused, and worth reading. Use when the user asks to de-slop, humanize, remove AI-sounding prose, or improve an AI-written document, article, explanation, proposal, or post. Not for source-close proofreading, content review, fiction, drafting from scratch, or evading AI-detection tools."
 ---
 
-# Rewrite generic prose
+# Deslop writing
 
 Revise professional prose that sounds generic or machine-produced. Earn the reader's attention by
 giving them clear value for the time they spend. This is a substantive rewrite: cut, reorder, and
