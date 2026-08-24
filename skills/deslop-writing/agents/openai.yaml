@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deslop Writing"
+  short_description: "Turn generic professional prose into focused writing"
+  default_prompt: "Use $deslop-writing to revise this draft into focused, specific prose that is worth reading."
