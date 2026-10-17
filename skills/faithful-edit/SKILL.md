@@ -1,6 +1,6 @@
 ---
 name: faithful-edit
-description: "Edit text the user will send as their own while staying faithful to its meaning, wording, voice, and structure. Use to proofread, shorten, soften, tone-check, or answer 'Can I say...?' Not for drafting, content review, translation, or substantial restructuring of generic or AI-written prose."
+description: "Edit text the user will send as their own while staying faithful to its meaning, wording, voice, and structure. Use to proofread, shorten, soften, tone-check, or answer 'Can I say...?' about a message, email, comment, or doc. Not for drafting, translation, content review, or rebuilding generic or AI-written prose around the reader and a central idea."
 ---
 
 # Faithful edit
@@ -11,8 +11,16 @@ its context without replacing the author's voice with a generic polished style.
 Default to the smallest change that solves the actual problem. Leaving the original unchanged is a
 valid result.
 
-Use `deslop-writing` instead when the user wants substantial restructuring of generic or AI-written prose
-around the reader, a central idea, and a clearer payoff.
+Use `deslop-writing` when the primary task is rebuilding generic or AI-written prose around the reader
+and a central idea. A restructure that keeps the author's voice and wording stays here.
+
+## What this skill does not do
+
+- No drafting from a blank page, and no translation.
+- No content or technical review, unless the user also asks for an edit; then edit only. Reviewing a
+  product document is `prd-review`.
+- No whole-draft rebuild of generic or AI-written prose around the reader and a central idea. That is
+  `deslop-writing`.
 
 ## Priority order
 
@@ -35,8 +43,8 @@ framing.
 ## Task and context
 
 The request may be proofreading, a conservative rewrite, shortening, tone repair, a tone check, or
-a wording correctness check without a rewrite. Match it. Do not turn a content review, technical
-review, or exact-format conversion into a rewrite unless the user also asks for editing.
+a wording correctness check without a rewrite. Match it. Do not turn an exact-format conversion
+into a rewrite unless the user also asks for editing.
 
 Infer channel, audience, purpose, and relationship from the request and the draft. Ask only when the
 ambiguity would materially change the meaning, firmness, or advice; otherwise make the least
@@ -91,8 +99,7 @@ normalization; never apply them to manufacture style the draft does not have.
 - Keep contractions such as `it's`, `I'd`, `don't`, and `can't`.
 - Keep first-person attribution where it carries evidence or scope. "I found that the button fails
   after reconnecting" is not the universal claim "the button fails after reconnecting."
-- Keep direct openings that state the purpose, varied sentence length, and slightly formal
-  connectives such as "in general" and "in particular".
+- Keep the draft's own openings, connectives, and sentence lengths.
 - Preserve em dashes already in the draft, but do not add them as a generic connector.
 - Do not write deliberate errors or stiffness to make the author sound non-native.
 
@@ -126,24 +133,13 @@ impact, position, request, boundary, deadline, and severity.
   the plugin is the right fit."
 
 Do not disguise a decision as an open question, turn a request into a suggestion, or add uncertainty
-the author does not feel. Direct and respectful is usually more collaborative than heavily softened.
-Use `we` only when ownership is genuinely shared.
+the author does not feel. Use `we` only when ownership is genuinely shared.
 
 ## Avoid generic polish
 
-Do not add:
-
-- canned openings, pleasantries, praise, enthusiasm, or performative gratitude;
-- unnecessary signposting, restatements, headings, bold lead-ins, or lists;
-- artificial symmetry, rule-of-three phrasing, uniformly shaped bullets, or dramatic contrasts;
-- corporate or marketing language, needless hedges, apologies, intensifiers, or polished flourishes.
-
-Judge words in context rather than applying a vocabulary blacklist. Terms that are vague in one
-message may be technically correct in another.
-
-Prevent generic AI-style wording in every edit, but do not turn a local rewrite into a substantive
-whole-draft rewrite. Use `deslop-writing` when removing generic AI prose or reorganizing for
-reader attention is the primary task. Do not speculate about who wrote the input.
+Do not introduce canned openings, signposting, rule-of-three phrasing, or corporate language. Judge
+words in context. If the primary task is rebuilding generic or AI-written prose around the reader
+and a central idea, use `deslop-writing`.
 
 ## Output
 
