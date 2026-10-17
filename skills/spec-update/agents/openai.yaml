@@ -1,4 +1,0 @@
-interface:
-  display_name: "Update Spec Change"
-  short_description: "Revise an existing spec change coherently"
-  default_prompt: "Use $spec-update to revise this existing change's planning artifacts and keep them coherent."

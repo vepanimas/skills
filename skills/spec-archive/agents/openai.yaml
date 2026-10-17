@@ -1,4 +1,0 @@
-interface:
-  display_name: "Archive Spec Change"
-  short_description: "Merge specs and archive a completed change"
-  default_prompt: "Use $spec-archive to merge the delta specs and archive this completed change."

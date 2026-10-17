@@ -1,4 +1,0 @@
-interface:
-  display_name: "Explore Spec Change"
-  short_description: "Explore a change before writing its specification"
-  default_prompt: "Use $spec-explore to investigate this change and clarify its scope and tradeoffs before planning."

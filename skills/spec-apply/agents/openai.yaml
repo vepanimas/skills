@@ -1,4 +1,0 @@
-interface:
-  display_name: "Apply Spec Change"
-  short_description: "Implement tasks from an existing spec change"
-  default_prompt: "Use $spec-apply to implement the remaining tasks in this spec change."
