@@ -1,8 +1,5 @@
 # Tone and context guidance
 
-Read this reference for sensitive messages, disagreement, escalation, boundaries, tone checks,
-passive aggression, or product framing.
-
 ## Read the situation
 
 Consider:

@@ -1,4 +1,4 @@
 interface:
   display_name: "Faithful Edit"
   short_description: "Edit wording while preserving meaning and voice"
-  default_prompt: "Use $faithful-edit to polish this text while preserving my meaning, voice, and structure."
+  default_prompt: "Use $faithful-edit to edit this text. Keep my meaning, voice, and structure, and change only what the request requires."
