@@ -1,4 +1,0 @@
-interface:
-  display_name: "Propose Spec Change"
-  short_description: "Create planning artifacts for a spec change"
-  default_prompt: "Use $spec-propose to create the planning artifacts for this change."
