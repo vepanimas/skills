@@ -1,7 +1,7 @@
 # Developer tools, platforms and AI features
 
-Failure modes that generic product review misses because they only show up when the user is a
-developer, the customer is another team, or the output is probabilistic.
+Extra missing requirements and contradictions for products where the user is a developer, the
+customer is another team, or the output is probabilistic.
 
 ## The user is a developer
 
@@ -15,8 +15,6 @@ developer, the customer is another team, or the output is probabilistic.
 - **The workaround is usually load-bearing.** Developers route around friction with scripts, macros,
   external tools, and habits. A change that removes the friction can also break the workaround and
   leave those users worse off. Does the document know what people do today?
-- **Preference is not a problem.** "Developers want X" is a request. What breaks, slows down, or
-  fails today is a problem. A document that only has requests will not survive prioritization.
 - **Novices and experts want opposite things.** Guidance, defaults and progressive disclosure help
   one and irritate the other. If the document serves both without saying how, it will be
   re-litigated in design review.
@@ -54,9 +52,9 @@ developer, the customer is another team, or the output is probabilistic.
   the feature. Does the document account for the first-run experience specifically?
 - **Model behavior drifts.** Requirements that depend on a specific model's current behavior have a
   shelf life. Is that acknowledged?
-- **"AI" is sometimes the solution looking for the problem.** Would a deterministic approach solve
-  the same problem more reliably? A document that never considers the non-AI alternative has not
-  justified its approach.
+- **A deterministic approach can be the outside proposal.** When the document never considers solving
+  the problem without a model, that silence can be one outside proposal. It is not a required
+  finding.
 
 ## Measurement inside a desktop or IDE product
 
