@@ -5,7 +5,7 @@ work across technology stacks and across a team.
 
 ## Writing
 
-- **prd-review** gives an expert PM review of an existing PRD or product/feature spec. It does not draft or rewrite.
+- **prd-review** gives senior-PM feedback on an existing product document: missing requirements, vague statements, contradictions, and a few ideas the document leaves out. It does not draft or rewrite.
 - **faithful-edit** conservatively proofreads, shortens, softens, or tone-checks text the user will send.
 - **deslop-writing** substantially revises AI-generated professional prose to make it focused, specific, and worth reading.
 
