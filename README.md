@@ -3,13 +3,14 @@
 A small set of reusable skills for day-to-day agentic development, designed to
 work across technology stacks and across a team.
 
-## Writing
+## Product
 
-- **prd-review** gives senior-PM feedback on an existing product document: missing requirements, vague statements, contradictions, and a few ideas the document leaves out. It does not draft or rewrite.
-- **faithful-edit** conservatively proofreads, shortens, softens, or tone-checks text the user will send.
-- **deslop-writing** substantially revises AI-generated professional prose to make it focused, specific, and worth reading.
+- **prd-review.** A senior PM reads a PRD or feature spec you already have and tells you what's missing, muddy, or inconsistent, including an idea or two the doc never brings up. They won't rewrite it.
 
-They split the work. Review a product document with **prd-review**. Preserve the author's wording and voice with **faithful-edit**. Rebuild generic AI prose around the reader and its central idea with **deslop-writing**.
+## Editing
+
+- **faithful-edit.** Edits a message, email, or doc you're about to send under your own name. Fixes it without sanding off how you write.
+- **deslop-writing.** Rewrites a draft that sounds like it was written by nobody in particular, around the specific thing it was trying to say.
 
 ## Install
 
