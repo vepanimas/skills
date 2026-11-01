@@ -6,6 +6,7 @@ work across technology stacks and across a team.
 ## Product
 
 - **prd-review.** A senior PM reads a PRD or feature spec you already have and tells you what's missing, muddy, or inconsistent, including an idea or two the doc never brings up. They won't rewrite it.
+- **project-status-refresh.** Checks your YouTrack epics and meta issues against what is actually happening, tells you the exact edits that would make them true again, and sends you a short status in Slack. It never changes YouTrack itself.
 
 ## Editing
 
