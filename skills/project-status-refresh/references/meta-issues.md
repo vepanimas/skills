@@ -15,9 +15,12 @@ change in a number means a change in the project and not in the method.
   Names match ignoring case, surrounding spaces, and a trailing colon.
 - **Done mark.** A ticked box, struck-through text, or the words done, fixed, or parked after the ID.
 - **Priority word.** Critical, Major, Normal, Minor, Show-stopper, or "must have" in the item text.
-- **One ID, one item.** Count distinct issue IDs. If an ID appears in more than one section, it
-  belongs to the highest-ranked one (`must`, then `should`, then any other) and is reported as
-  listed twice.
+- **References.** When the meta issue has `must` or `should` sections, a list line in any other
+  section (requirements, risks, open decisions, action lists) is a reference, not an item. It is
+  not counted, not checked for scope, and never makes an ID listed twice.
+- **One ID, one item.** Count distinct issue IDs. If an ID appears in more than one counted
+  section, it belongs to the highest-ranked one (`must`, then `should`) and is reported as listed
+  twice.
 - **The checklist beats `watch`.** An ID in both is counted as a checklist item.
 - **Counts.** Must-haves: distinct IDs in `must` sections. Open: those whose state is not resolved.
   Resolved states are Fixed, Done, Verified, Duplicate, Obsolete, Won't fix, and the project's
