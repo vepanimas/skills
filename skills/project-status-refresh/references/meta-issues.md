@@ -8,9 +8,11 @@ change in a number means a change in the project and not in the method.
 - **Item.** A list line (`-`, `*`, `1.`, or a task box `- [ ]` / `- [x]`) that contains a YouTrack
   issue ID or issue link. Prose that mentions an ID is not an item. A list line under a counted
   section without an issue ID is an untracked item: report it as drift, don't count it.
-- **Section.** The nearest line above the item that is a Markdown heading or a line made only of
-  bold text (`**Payments**`). Match it to the config's `must` and `should` names, ignoring case,
-  surrounding spaces, and a trailing colon.
+- **Section.** Walk up from the item. A line made only of bold text (`**Payments**`) is the section
+  if its name matches a `must` or `should` name; otherwise it is a sub-label, so skip it and keep
+  walking. The first Markdown heading reached is the section, whether it matches or not, so a
+  sub-label like `**Features:**` under `## Should have` never pulls items out of Should have.
+  Names match ignoring case, surrounding spaces, and a trailing colon.
 - **Done mark.** A ticked box, struck-through text, or the words done, fixed, or parked after the ID.
 - **Priority word.** Critical, Major, Normal, Minor, Show-stopper, or "must have" in the item text.
 - **One ID, one item.** Count distinct issue IDs. If an ID appears in more than one section, it
