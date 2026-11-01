@@ -40,7 +40,7 @@ Every value comes from this run's reads. Lists are sorted by issue ID, so two fi
                   "unresolved_subtasks": 44 },
       "checklist": [
         { "id": "WEB-101", "section": "Major issues", "rank": "must", "ticked": false,
-          "state": "Open", "priority": "Critical", "assignee": "kiril.panayotov",
+          "state": "Open", "priority": "Critical", "assignee": "Kiril Panayotov",
           "release": ["2026.3.1"] }
       ],
       "subtasks": ["WEB-101", "WEB-102"]
@@ -58,7 +58,7 @@ Every value comes from this run's reads. Lists are sorted by issue ID, so two fi
 
 - `baseline.kind`: `state`, `slack`, or `default-7-days`.
 - `rank`: `must`, `should`, or `other`.
-- `assignee`: the login, or `null`.
+- `assignee`: the full name, as the report shows it, or `null`.
 - `key`: `<issue ID>:<kind>`. Kinds for drift are `state`, `priority`, `scope`, `release`, `owner`,
   and `evidence`. Kinds for risks are `blocked`, `date-risk`, `stale`, and `unanswered`. The same
   problem gets the same key on every run.
