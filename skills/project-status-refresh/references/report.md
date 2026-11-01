@@ -6,18 +6,27 @@ markdown: bold, `[text](url)` links, lists. Every issue ID is a link to
 
 Writing: plain words, short sentences, no em-dashes, names in plain text.
 
+Layout: both messages are read on a phone, so give them air. Put one empty line between blocks:
+after the title, between the overall line and the meta issue bullets, before and after each
+section heading's list, and before the footer. Never two empty lines in a row. Inside a list, no
+empty lines.
+
 ## Top-level message
 
-Under 15 lines; it is mostly read on a phone.
+At most 15 lines of text, not counting empty lines.
 
 ```
 **🧭 <project.name>, <cadence> status, <Mon DD>**
+
 <light> Overall: <On track | At risk | Off track> · <N> working days to <next milestone> (<Mon DD>)
+
 • <light> [<ID>](<link>) <meta issue title>: <open> of <total> must-haves open. <reason>
 • <light> [<ID>](<link>) <meta issue title>: <n> unresolved. <reason>
 
 **Needs attention**
+
 1. <emoji> [<ID>](<link>) <short title>: <what is off> (<owner>)
+2. <emoji> [<ID>](<link>) <short title>: <what is off> (<owner>)
 
 Since last run: ✅ <n> done · 🆕 <n> new · 🛠 <n> fixes proposed · ✔️ <n> fixes applied
 ```
@@ -45,6 +54,25 @@ line per issue:
    applied** (drift from the baseline that no longer holds).
 4. **🗣️ From Slack, meetings, and docs**: decisions and open questions, each with its source.
 5. **⚠️ Gaps**: sources that couldn't be read.
+
+Each section is its bold heading, an empty line, its list, and an empty line before the next
+heading. In Proposed fixes, each meta issue is a plain line with its link, followed by its list, and
+an empty line separates one meta issue's group from the next:
+
+```
+**🛠 Proposed fixes**
+
+[<ID>](<link>) <meta issue title>
+• [<ID>](<link>) <drift>: <fix>
+• [<ID>](<link>) <drift>: <fix>
+
+[<ID>](<link>) <meta issue title>
+• [<ID>](<link>) <drift>: <fix>
+
+**Other risks**
+
+• 📅 [<ID>](<link>) <what is off> (<owner>)
+```
 
 ## Quiet day
 
