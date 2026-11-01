@@ -40,6 +40,7 @@ report:
   slack_target: "U0123456789"              # user ID (DM) or channel ID. Default: the owner's DM
   cadence: daily                           # daily | weekly; sets the thresholds
   allow_mentions: false
+  archive_dir: "jobs/checkout/runs"        # optional; one folder per run, the next run's baseline
 
 dry_run: false
 ```
@@ -49,5 +50,8 @@ dry_run: false
 - `project.owner`: look up the current user with the Slack and YouTrack tools.
 - `report.slack_target`: the owner's DM.
 - `report.cadence`: `daily`.
+- `report.archive_dir`: none. Without it, the baseline is the newest Slack report, and removed
+  checklist items and applied fixes can't be detected. A relative path is relative to the working
+  directory.
 - A meta issue without `must`: Critical and Show-stopper priority count as must-have for the traffic
   light, and the report shows "unresolved" instead of a must-have count.

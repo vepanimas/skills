@@ -19,8 +19,10 @@ Under 15 lines; it is mostly read on a phone.
 **Needs attention**
 1. <emoji> [<ID>](<link>) <short title>: <what is off> (<owner>)
 
-Since last run: ✅ <n> done · 🆕 <n> new · 🛠 <n> fixes proposed
+Since last run: ✅ <n> done · 🆕 <n> new · 🛠 <n> fixes proposed · ✔️ <n> fixes applied
 ```
+
+- `✔️ fixes applied` needs a `state.json` baseline. Without one, drop it.
 
 - One bullet per meta issue. The must-have form for meta issues with `must` sections, the
   unresolved form for the rest.
@@ -37,9 +39,10 @@ message shows. Don't repeat the Needs attention items. Sections in this order, s
 line per issue:
 
 1. **🛠 Proposed fixes**, grouped by meta issue. Every drift finding, each with its fix. This is the
-   list the owner works through.
+   list the owner works through. A finding from an earlier run ends with `(since <Mon DD>)`.
 2. **Other risks**: 📅 ⛔ 🐢 💬 findings not shown above.
-3. **✅ Done** and **🆕 New**.
+3. **✅ Done**, **🆕 New**, **➖ Removed** (checklist items gone since the baseline), and **✔️ Fixes
+   applied** (drift from the baseline that no longer holds).
 4. **🗣️ From Slack, meetings, and docs**: decisions and open questions, each with its source.
 5. **⚠️ Gaps**: sources that couldn't be read.
 

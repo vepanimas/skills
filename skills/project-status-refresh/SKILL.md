@@ -48,9 +48,12 @@ The job runs unattended with broad tool access, and one wrong write is visible t
 
 ## Run
 
-1. **Load the config and the baseline.** Fill defaults from the config reference. The baseline is
-   the time of the newest report this skill sent to `report.slack_target` (its title starts with
-   `🧭 <project.name>,`). If there is none, use the last 7 days and say so in the report.
+1. **Load the config and the baseline.** Fill defaults from the config reference. If
+   `report.archive_dir` is set and holds a run, the baseline is the newest run's `state.json`: its
+   time, lights, counts, checklist, and findings. See [references/state.md](references/state.md).
+   Otherwise the baseline is the time of the newest report this skill sent to
+   `report.slack_target` (its title starts with `🧭 <project.name>,`). If there is neither, use the
+   last 7 days and say so in the report.
 2. **Read the meta issues.** For each `youtrack.meta_issues` entry, read the full description and
    parse its checklist exactly as [references/meta-issues.md](references/meta-issues.md) says.
    Counts depend on following those rules to the letter.
@@ -64,9 +67,14 @@ The job runs unattended with broad tool access, and one wrong write is visible t
    - `evidence.docs`: changes and new comments since the baseline.
    If a source fails, carry on and list the gap in the report.
 4. **Find drift and risks.** Apply [references/meta-issues.md](references/meta-issues.md). Drift
-   gets a proposed fix. Delivery risks feed the traffic lights.
+   gets a proposed fix. Delivery risks feed the traffic lights. With a `state.json` baseline,
+   compare as [references/state.md](references/state.md) says: items added and removed, findings
+   fixed, still open, and new.
 5. **Send the report** in the format in [references/report.md](references/report.md).
-6. **Finish** with two or three lines in chat: what changed, what needs the owner's attention, and
+6. **Archive the run** if `report.archive_dir` is set and this is not a dry run: write `report.md`
+   and `state.json` to a new `<archive_dir>/<YYYY-MM-DDTHHMM>/` folder, as
+   [references/state.md](references/state.md) says. Never edit an earlier run.
+7. **Finish** with two or three lines in chat: what changed, what needs the owner's attention, and
    a link to the Slack message.
 
 ## Setup
