@@ -1,6 +1,6 @@
 # PM bundle
 
-37 skills for product work, from the first interview to the release notes, with one skill per job.
+38 skills for product work, from the first interview to the release notes, with one skill per job. The two story formats are the exception: use the one the request names.
 
 Big skill catalogs overlap. Install two of them and the agent gets three ways to write a PRD and
 picks one at random. This bundle takes Paweł Huryn's [pm-skills](https://github.com/phuryn/pm-skills)
@@ -26,6 +26,14 @@ and is installed for Claude Code only. Without the CLI, the script skips it and 
 brew install jetbrains/utils/youtrack
 youtrack auth login
 ```
+
+Claude Desktop and Claude Web take a zip per skill, not this global install. Build that pack from the same skill list:
+
+```bash
+./skills/pm-bundle/claude-desktop.sh
+```
+
+That writes `pm-bundle/dist/pm-bundle-claude-desktop.zip` and does not install anything. Unzip it, then upload the skill zips inside under Settings → Capabilities → Skills. Do not upload the outer zip. `youtrack-cli` is left out: it installs through the YouTrack CLI for Claude Code only. `prd-review` is taken from this clone, including `references/`. The other skills are shallow-cloned from their GitHub repos.
 
 ## Frame and discover
 
@@ -61,7 +69,8 @@ youtrack auth login
 | `outcome-roadmap` | Huryn | Rewrite a feature list as outcomes |
 | `epic-hypothesis` | Dean Peters | Frame an initiative as a bet that can be wrong |
 | `epic-breakdown-advisor` | Dean Peters | Split an item that is too big into vertical slices |
-| `job-stories` | Huryn | When / I want / so I can, with acceptance criteria |
+| `job-stories` | Huryn | When / I want / so I can, with acceptance criteria. Default when the request does not name a format |
+| `user-stories` | Huryn | As a / I want / so that, with the 3 C's and INVEST. Use when the request asks for a user story |
 | `pre-mortem` | Huryn | Assume the launch failed and separate real risks from worries |
 | `strategy-red-team` | Huryn | Attack the few assumptions that would kill the plan, and name the cheapest test |
 
@@ -108,7 +117,7 @@ Left out on purpose until there is a reason to add them:
 
 | Source | Skills | License |
 |---|---|---|
-| [phuryn/pm-skills](https://github.com/phuryn/pm-skills) | 30 | MIT |
+| [phuryn/pm-skills](https://github.com/phuryn/pm-skills) | 31 | MIT |
 | [deanpeters/Product-Manager-Skills](https://github.com/deanpeters/Product-Manager-Skills) | 5 | CC BY-NC-SA 4.0 |
 | This repo | 1 | MIT |
 | [JetBrains/youtrack-cli](https://github.com/JetBrains/youtrack-cli) | 1 | See the repo |

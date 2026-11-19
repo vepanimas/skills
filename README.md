@@ -27,14 +27,15 @@ npx skills add vepanimas/skills --skill prd-review  # one skill
 
 ## PM bundle
 
-Three skills don't cover the whole job. [`pm-bundle`](pm-bundle/README.md) is a curated set of 37
+Three skills don't cover the whole job. [`pm-bundle`](pm-bundle/README.md) is a curated set of 38
 for discovery, strategy, specs, delivery, and metrics. It takes them from Dean Peters' and Paweł
-Huryn's catalogs, adds `prd-review` and the official `youtrack-cli`, and keeps exactly one skill per
-job, so the agent never has to pick between two that do the same thing.
+Huryn's catalogs, adds `prd-review` and the official `youtrack-cli`, and keeps one skill per job.
+The two story formats are the exception: `job-stories` unless the request asks for a user story.
 
 ```bash
 git clone https://github.com/vepanimas/skills.git
 ./skills/pm-bundle/install.sh
+./skills/pm-bundle/claude-desktop.sh   # zip pack for Claude Desktop
 ```
 
 ## License

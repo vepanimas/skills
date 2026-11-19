@@ -20,4 +20,4 @@ diff -q skills/<skill-name>/SKILL.md ~/.agents/skills/<skill-name>/SKILL.md
 
 When a skill is added or removed, update its entry in the README catalog.
 
-`pm-bundle/install.sh` and `pm-bundle/README.md` list the same skills. Change them together, and keep the skill count in both READMEs right.
+`pm-bundle/skills.sh` is the skill list for `install.sh` and `claude-desktop.sh`. `pm-bundle/README.md` lists the same skills. Change them together, and keep the skill count in both READMEs right.
