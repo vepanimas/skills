@@ -46,3 +46,8 @@ huryn_skills=(
   ab-test-analysis
   sql-queries
 )
+
+repo_skills=(
+  prd-review
+  learning-prompts
+)

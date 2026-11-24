@@ -1,12 +1,12 @@
 # PM bundle
 
-38 skills for product work, from the first interview to the release notes, with one skill per job. The two story formats are the exception: use the one the request names.
+39 skills for product work, from the first interview to the release notes, with one skill per job. The two story formats are the exception: use the one the request names.
 
 Big skill catalogs overlap. Install two of them and the agent gets three ways to write a PRD and
 picks one at random. This bundle takes Paweł Huryn's [pm-skills](https://github.com/phuryn/pm-skills)
 as the default and adds Dean Peters' [Product-Manager-Skills](https://github.com/deanpeters/Product-Manager-Skills)
-only for jobs pm-skills doesn't cover. On top of that it adds `prd-review` from this repo and the
-official `youtrack-cli`.
+only for jobs pm-skills doesn't cover. On top of that it adds `prd-review` and `learning-prompts`
+from this repo and the official `youtrack-cli`.
 
 ## Install
 
@@ -17,7 +17,7 @@ git clone https://github.com/vepanimas/skills.git
 
 The script installs every skill at user level for Claude Code, Codex, Cursor, Junie, Pi, and
 OpenCode. Run it again to update. It fetches skills from GitHub, not from your clone, so a local
-change to `prd-review` reaches the bundle only after it is pushed.
+change to `prd-review` or `learning-prompts` reaches the bundle only after it is pushed.
 
 `youtrack-cli` ships with JetBrains' [`youtrack` CLI](https://github.com/JetBrains/youtrack-cli)
 and is installed for Claude Code only. Without the CLI, the script skips it and says so:
@@ -33,7 +33,7 @@ Claude Desktop and Claude Web take a zip per skill, not this global install. Bui
 ./skills/pm-bundle/claude-desktop.sh
 ```
 
-That writes `pm-bundle/dist/pm-bundle-claude-desktop.zip` and does not install anything. Unzip it, then upload the skill zips inside under Settings → Capabilities → Skills. Do not upload the outer zip. `youtrack-cli` is left out: it installs through the YouTrack CLI for Claude Code only. `prd-review` is taken from this clone, including `references/`. The other skills are shallow-cloned from their GitHub repos.
+That writes `pm-bundle/dist/pm-bundle-claude-desktop.zip` and does not install anything. Unzip it, then upload the skill zips inside under Settings → Capabilities → Skills. Do not upload the outer zip. `youtrack-cli` is left out: it installs through the YouTrack CLI for Claude Code only. `prd-review` and `learning-prompts` are taken from this clone, including `references/`. The other skills are shallow-cloned from their GitHub repos.
 
 ## Frame and discover
 
@@ -101,6 +101,12 @@ have nothing to analyze, and they shouldn't make numbers up.
 | `ab-test-analysis` | Huryn | Significance and a ship, extend, or stop call from real results |
 | `sql-queries` | Huryn | A query from a schema you provide |
 
+## Learn
+
+| Skill | Source | Use it for |
+|---|---|---|
+| `learning-prompts` | this repo | Choose a learning-material type or combination, or help choose one, and write the prompt |
+
 ## Add when the job shows up
 
 Left out on purpose until there is a reason to add them:
@@ -119,7 +125,7 @@ Left out on purpose until there is a reason to add them:
 |---|---|---|
 | [phuryn/pm-skills](https://github.com/phuryn/pm-skills) | 31 | MIT |
 | [deanpeters/Product-Manager-Skills](https://github.com/deanpeters/Product-Manager-Skills) | 5 | CC BY-NC-SA 4.0 |
-| This repo | 1 | MIT |
+| This repo | 2 | MIT |
 | [JetBrains/youtrack-cli](https://github.com/JetBrains/youtrack-cli) | 1 | See the repo |
 
 The script installs each skill from its own repository. This repo doesn't copy their files, and

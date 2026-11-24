@@ -13,6 +13,7 @@ of filling it with invented evidence.
 | [`prd-review`](skills/prd-review/SKILL.md) | Reads a PRD or feature spec you already have and points at what an implementer could get wrong: a missing requirement, a sentence that reads two ways, two passages that disagree. Knows the extra traps of developer tools, platforms, and AI features. Gives notes, not a rewrite or a score. |
 | [`faithful-edit`](skills/faithful-edit/SKILL.md) | Proofreads, shortens, or softens a message you will send under your own name, and keeps your meaning, voice, and firmness. Leaving the draft alone is a valid answer. |
 | [`deslop-writing`](skills/deslop-writing/SKILL.md) | Rebuilds a generic or AI-sounding draft around the one thing it was trying to say. Code, numbers, names, and links stay exactly as written. |
+| [`learning-prompts`](skills/learning-prompts/SKILL.md) | Chooses a learning-material type or combination, or helps you choose, then writes the prompt. Does not write the primer, guide, or cheat sheet. |
 
 ## Install
 
@@ -27,9 +28,9 @@ npx skills add vepanimas/skills --skill prd-review  # one skill
 
 ## PM bundle
 
-Three skills don't cover the whole job. [`pm-bundle`](pm-bundle/README.md) is a curated set of 38
+Four skills don't cover the whole job. [`pm-bundle`](pm-bundle/README.md) is a curated set of 39
 for discovery, strategy, specs, delivery, and metrics. It takes them from Dean Peters' and Paweł
-Huryn's catalogs, adds `prd-review` and the official `youtrack-cli`, and keeps one skill per job.
+Huryn's catalogs, adds `prd-review`, `learning-prompts`, and the official `youtrack-cli`, and keeps one skill per job.
 The two story formats are the exception: `job-stories` unless the request asks for a user story.
 
 ```bash

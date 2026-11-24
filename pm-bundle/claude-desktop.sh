@@ -70,7 +70,9 @@ for name in "${huryn_skills[@]}"; do
   zip_skill "$name" "$(find_huryn_skill "$tmp/huryn" "$name")" "$stage" "$out_dir"
 done
 
-zip_skill prd-review "$root/skills/prd-review" "$stage" "$out_dir"
+for name in "${repo_skills[@]}"; do
+  zip_skill "$name" "$root/skills/$name" "$stage" "$out_dir"
+done
 
 echo "Skipped youtrack-cli: Claude Desktop packs upload skill folders, and youtrack-cli installs through the youtrack CLI for Claude Code only." >&2
 

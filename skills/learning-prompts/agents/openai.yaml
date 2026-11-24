@@ -1,0 +1,4 @@
+interface:
+  display_name: "Learning Prompts"
+  short_description: "Choose a learning format and write the prompt"
+  default_prompt: "Use $learning-prompts to choose a learning-material type or combination and write a prompt for this topic."

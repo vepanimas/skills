@@ -23,9 +23,13 @@ npx --yes skills add phuryn/pm-skills -g -y \
   "${agents[@]}" \
   "${skill_args[@]}"
 
+skill_args=()
+for name in "${repo_skills[@]}"; do
+  skill_args+=(--skill "$name")
+done
 npx --yes skills add vepanimas/skills -g -y \
   "${agents[@]}" \
-  --skill prd-review
+  "${skill_args[@]}"
 
 # The official YouTrack skill ships with the JetBrains youtrack CLI. It installs globally by default.
 if command -v youtrack >/dev/null; then
