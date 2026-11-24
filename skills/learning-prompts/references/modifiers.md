@@ -47,6 +47,6 @@ One particularly useful technique is to specify your existing knowledge and desi
 
 For example, add this to your prompts:
 
-> Assume I'm an experienced software engineer transitioning into product management. Skip generic introductory explanations and focus on the concepts, underlying reasoning, trade-offs, and practical decisions. Draw analogies to software engineering where helpful, but explain product-management-specific terminology.
+> Assume I'm a product manager with deep, broad software engineering experience. Skip generic introductory explanations and focus on the concepts, underlying reasoning, trade-offs, and practical decisions. Draw analogies to software engineering where helpful, and use product-management terminology precisely.
 
 This helps avoid overly elementary explanations while ensuring that unfamiliar concepts are properly introduced.
